@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Buttons</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #27282c;
+    }
+    .container {
+      display: flex;
+      gap: 120px;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      min-height: 100vh;
+    }
+    .button {
+      position: relative;
+      display: inline-block;
+      padding: 16px 30px;
+      font-size: 1.5rem;
+      color: var(--color);
+      text-decoration: none;
+      border: 2px solid rgba(0, 0, 0, 0.5);
+      border-radius: 4px;
+      transition: 0.5s;
+    }
+    .button:hover {
+      color: #fff;
+      background-color: var(--color);
+      box-shadow: 0 0 35px var(--color);
+    }
+    .button span {
+      position: absolute;
+      display: block;
+    }
+    .button span:nth-child(1) {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--color));
+      animation: animate1 1s linear infinite;
+    }
+    @keyframes animate1 {
+      0% {
+        left: -100%;
+      }
+      100% {
+        left: 100%;
+      }
+    }
+    .button span:nth-child(2) {
+      top: 0;
+      right: 0;
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(180deg, transparent, var(--color));
+      animation: animate2 1s linear infinite;
+      animation-delay: 0.25s;
+    }
+    @keyframes animate2 {
+      0% {
+        top: -100%;
+      }
+      100% {
+        top: 100%;
+      }
+    }
+    .button span:nth-child(3) {
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(270deg, transparent, var(--color));
+      animation: animate3 1s linear infinite;
+      animation-delay: 0.5s;
+    }
+    @keyframes animate3 {
+      0% {
+        right: -100%;
+      }
+      100% {
+        right: 100%;
+      }
+    }
+    .button span:nth-child(4) {
+      bottom: 0;
+      left: 0;
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(360deg, transparent, var(--color));
+      animation: animate4 1s linear infinite;
+      animation-delay: 0.75s;
+    }
+    @keyframes animate4 {
+      0% {
+        bottom: -100%;
+      }
+      100% {
+        bottom: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a class="button" href="#" style="--color:#1e9bff;">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Button
+    </a>
+    <a class="button" href="#" style="--color: #ff1867;">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Button
+    </a>
+    <a class="button" href="#" style="--color: #6eff3e;">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Button
+    </a>
+  </div>
+</body>
+</html>
