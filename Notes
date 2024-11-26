@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Buttons</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: auto;
+      background-color: #27282c;
+    }
+    .container{
+      display: flex;
+      flex-direction: column;
+      margin: 10%;
+      margin-bottom: 40%;
+    }
+    .button {
+      position: relative;
+      display: inline-block;
+      padding: 16px 30px;
+      font-size: 1.5rem;
+      color: var(--color);
+      text-decoration: none;
+      border: 2px solid rgba(0, 0, 0, 0.5);
+      border-radius: 4px;
+      transition: 0.5s;
+      margin-bottom: 50px; /* Adds 20px space below each button */
+    }
+    .button:hover {
+      color: #fff;
+      background-color: var(--color);
+      box-shadow: 0 0 35px var(--color);
+    }
+    .button span {
+      position: absolute;
+      display: block;
+    }
+    .button span:nth-child(1) {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--color));
+      animation: animate1 1s linear infinite;
+    }
+    @keyframes animate1 {
+      0% { left: -100%; }
+      100% { left: 100%; }
+    }
+    .button span:nth-child(2) {
+      top: 0;
+      right: 0;
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(180deg, transparent, var(--color));
+      animation: animate2 1s linear infinite;
+      animation-delay: 0.25s;
+    }
+    @keyframes animate2 {
+      0% { top: -100%; }
+      100% { top: 100%; }
+    }
+    .button span:nth-child(3) {
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(270deg, transparent, var(--color));
+      animation: animate3 1s linear infinite;
+      animation-delay: 0.5s;
+    }
+    @keyframes animate3 {
+      0% { right: -100%; }
+      100% { right: 100%; }
+    }
+    .button span:nth-child(4) {
+      bottom: 0;
+      left: 0;
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(360deg, transparent, var(--color));
+      animation: animate4 1s linear infinite;
+      animation-delay: 0.75s;
+    }
+    @keyframes animate4 {
+      0% { bottom: -100%; }
+      100% { bottom: 100%; }
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="container">
+  
+  <a class="button" href="#" style="--color:#1e9bff;"><span></span><span></span><span></span><span></span>Notes 1🧾</a>
+  <a class="button" href="#" style="--color:#ff1867;"><span></span><span></span><span></span><span></span>Notes 2🧾</a>
+  <a class="button" href="#" style="--color:#6eff3e;"><span></span><span></span><span></span><span></span></a>
+  <a class="button" href="#" style="--color:#ff7518;"><span></span><span></span><span></span><span></span></a>
+  <a class="button" href="#" style="--color:#ff00ff;"><span></span><span></span><span></span><span></span></a>
+  <a class="button" href="#" style="--color:#00ffff;"><span></span><span></span><span></span><span></span></a>
+  <a class="button" href="#" style="--color:#ff5733;"><span></span><span></span><span></span><span></span></a>
+  <a class="button" href="#" style="--color:#ffc300;"><span></span><span></span><span></span><span></span></a>
+  <a class="button" href="#" style="--color:#c70039;"><span></span><span></span><span></span><span></span></a>
+  <a class="button" href="#" style="--color:#900c3f;"><span></span><span></span><span></span><span></span></a>
+  <a class="button" href="#" style="--color:#581845;"><span></span><span></span><span></span><span></span></a>
+  <a class="button" href="#" style="--color:#ff3333;"><span></span><span></span><span></span><span></span></a>
+  <a class="button" href="#" style="--color:#33ff57;"><span></span><span></span><span></span><span></span></a>
+  <a class="button" href="#" style="--color:#3399ff;"><span></span><span></span><span></span><span></span></a>
+  <a class="button" href="#" style="--color:#b833ff;"><span></span><span></span><span></span><span></span></a>
+  <a class="button" href="#" style="--color:#e6ff33;"><span></span><span></span><span></span><span></span></a>
+  <a class="button" href="#" style="--color:#ff66b2;"><span></span><span></span><span></span><span></span></a>
+  <a class="button" href="#" style="--color:#66ff99;"><span></span><span></span><span></span><span></span></a>
+  <a class="button" href="#" style="--color:#ffcc00;"><span></span><span></span><span></span><span></span></a>
+  <a class="button" href="#" style="--color:#00ccff;"><span></span><span></span><span></span><span></span></a>
+  <a class="button" href="#" style="--color:#cc00ff;"><span></span><span></span><span></span><span></span></a>
+  <a class="button" href="#" style="--color:#ff99cc;"><span></span><span></span><span></span><span></span></a>
+  <a class="button" href="#" style="--color:#00ffcc;"><span></span><span></span><span></span><span></span></a>
+  <a class="button" href="#" style="--color:#ffcc66;"><span></span><span></span><span></span><span></span></a>
+  <a class="button" href="#" style="--color:#99ff33;"><span></span><span></span><span></span><span></span></a>
+  <a class="button" href="#" style="--color:#ccff99;"><span></span><span></span><span></span><span></span></a>
+  <a class="button" href="#" style="--color:#ff0066;"><span></span><span></span><span></span><span></span></a>
+  <a class="button" href="#" style="--color:#6600ff;"><span></span><span></span><span></span><span></span></a>
+  <a class="button" href="#" style="--color:#ff3300;"><span></span><span></span><span></span><span></span></a>
+  <a class="button" href="#" style="--color:#33ccff;"><span></span><span></span><span></span><span></span></a>
+  <a class="button" href="#" style="--color:#cc00cc;"><span></span><span></span><span></span><span></span></a>
+  <a class="button" href="#" style="--color:#ffccff;"><span></span><span></span><span></span><span></span></a>
+  <a class="button" href="#" style="--color:#ccff33;"><span></span><span></span><span></span><span></span></a>
+  <a class="button" href="#" style="--color:#ff99ff;"><span></span><span></span><span></span><span></span></a>
+  <a class="button" href="#" style="--color:#99ccff;"><span></span><span></span><span></span><span></span></a>
+  <a class="button" href="#" style="--color:#33ff66;"><span></span><span></span><span></span><span></span></a>
+  <a class="button" href="#" style="--color:#ff9933;"><span></span><span></span><span></span><span></span></a>
+  <a class="button" href="#" style="--color:#66ffcc;"><span></span><span></span><span></span><span></span></a>
+  <a class="button" href="#" style="--color:#9933ff;"><span></span><span></span><span></span><span></span></a>
+  <a class="button" href="#" style="--color:#00ff99;"><span></span><span></span><span></span><span></span></a>
+  <a class="button" href="#" style="--color:#ff6699;"><span></span><span></span><span></span><span></span></a>
+  <a class="button" href="#" style="--color:#00cc99;"><span></span><span></span><span></span><span></span></a>
+  <a class="button" href="#" style="--color:#66ff00;"><span></span><span></span><span></span><span></span></a>
+  <a class="button" href="#" style="--color:#ff3300;"><span></span><span></span><span></span><span></span></a>
+  <a class="button" href="#" style="--color:#9933cc;"><span></span><span></span><span></span><span></span></a>
+  <a class="button" href="#" style="--color:#00cc66;"><span></span><span></span><span></span><span></span></a>
+  <a class="button" href="#" style="--color:#ffcc99;"><span></span><span></span><span></span><span></span></a>
+  <a class="button" href="#" style="--color:#99ff66;"><span></span><span></span><span></span><span></span></a>
+  <a class="button" href="#" style="--color:#ff66ff;"><span></span><span></span><span></span><span></span></a>
+  <a class="button" href="#" style="--color:#ccff66;"><span></span><span></span><span></span><span></span></a>
+  <a class="button" href="#" style="--color:#6699ff;"><span></span><span></span><span></span><span></span></a>
+  <a class="button" href="#" style="--color:#33ffcc;"><span></span><span></span><span></span><span></span></a>
+  <a class="button" href="#" style="--color:#ff6699;"><span></span><span></span><span></span><span></span></a>
+  
+  
+  <a class="button" href="javascript:void(0);" style="--color:#1e9bff;"><span></span><span></span><span></span><span></span></a>
+  
+  </div>
+</body>
+</html>
